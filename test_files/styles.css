@@ -241,3 +241,7 @@ figure.toc>.figcontent a:hover {
 fieldset label {
   font-weight: bold;
 }
+
+.product:focus {
+  background: pink;
+}

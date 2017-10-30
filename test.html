@@ -142,35 +142,108 @@ img.emoji {
     </form>
 <form  id="productDetails">
     <fieldset>
-      <legend aria-label="Choose your Product">Product Details</legend>
-        <div>
-			<label aria-label="Select Product" for="product">Choose your product
-				    <select id="sex" name="selectProduct" aria-label="Select product">
-				      <option selected="selected" value="1">Please choose Product…</option>
-				       <option value="2">Headphones</option>
-				       <option value="3">Laptop</option>
-				       <option value="4">USB Device</option>
-				       </select>
-		     </label>
-    	</div>
-    	<div>
+      <legend tabindex="1">Pizza Order</legend>
+      <div class="product" style="width:40%;font-size:12px;float:left;" tabindex="1">
+      	<label>
+	        <img src="test_files/1371006.png" title="Pizza Hut Veggie Supreme Pizza" alt="">
+	              <div >
+	                  <strong>Veggie Supreme.</strong>
+	              </div>
+	              <div >
+	                  <span >
+	                  Ingredients:  Onion, Capsicum, Mushroom, Red Paprika, Black Olives, Sweet Corn                </span>
+
+	              </div>
+	              <div >
+	                  <span>
+                         <small >Price</small> <strong>490</strong>
+	                   </span>
+
+	              </div>
+	              <input id="veggie" type="radio" name="pizza" value="veggie">
+	       </label>
+		</div>
+		<div  class="product"  style="width:40%;font-size:12px;float:right;"  tabindex="2">
+		<label>
+		       <img src="test_files/1371007.png" title=" Hot &amp; Fresh Exotica Italian Veg Pizza " alt="">
+		            <div class="product-name">
+		                <span>Supreme</span>
+		                <strong >Exotica.</strong>
+		            </div>
+		            <div >
+		                <span >
+		                   Ingredients:  Red Capsicum, Green Capsicum, Baby Corn, Black Olives, Jalapenos
+		                    </span>
+
+		            </div>
+		            <div>
+						    <span>
+					                         <small >Price</small> <strong >400</strong>
+						                   </span>
+
+	              </div>
+		            <input id="veggie" type="radio" name="pizza" value="exotica">
+	       </label>
+        </div>
+        <div  class="product"  style="width:40%;font-size:12px;float:right;"  tabindex="3">
+				<label>
+				       <img src="test_files/1371005.png" title="Paneer Vegorama " alt="">
+				           <div class="product-name">
+						                   <span>Supreme</span>
+						                   <strong>Paneer Vegorama.</strong>
+           				 </div>
+				            <div >
+				                <span >
+
+                    Ingredients: Paneer, Onion, Capsicum, Black Olives, Red Paprika
+				                    </span>
+
+				            </div>
+				            <div>
+								    <span>
+							                         <small >Price</small> <strong >410</strong>
+								                   </span>
+
+			              </div>
+				            <input id="veggie" type="radio" name="pizza" value="Paneer">
+			       </label>
+        </div>
+        <div  class="product"  style="width:40%;font-size:12px;float:left;"  tabindex="4">
+						<label>
+						      <img src="test_files/1371001.png" title="Tandoori Paneer Pizza" alt="">
+						           <div class="product-name">
+								        <span>Signature</span>
+								         <strong>Tandoori Paneer.</strong>
+            </div>
+						            <div >
+						                <span >
+                    Ingredients: Paneer, Onion, Capsicum, Red Paprika &amp; Tomato
+						                    </span>
+
+						            </div>
+						            <div>
+										    <span>
+									                         <small >Price</small> <strong >440</strong>
+										                   </span>
+
+					              </div>
+						            <input id="veggie" type="radio" name="pizza" value="PaneerTadoori">
+					       </label>
+        </div>
+    	<div style="width:100%;float:right;">
 			<button id="myBtn1" type=button aria-label="Continue next" onclick="goto('customizeProduct')">Continue</button>
 			</div>
 </fieldset>
 </form>
 <form id="customizeProduct">
 <fieldset>
-      <legend aria-label="Customize your product">Customize product</legend>
-        <div>
-<label aria-label="Select Product" for="product">Choose your option
-				    <select id="selectProduct" name="selectProduct" aria-label="Select product">
-				      <option selected="selected" value="1">Please choose Product…</option>
-				       <option value="2">Headphones</option>
-				       <option value="3">Laptop</option>
-				       <option value="4">USB D</option>
-				       </select>
-		     </label>
-    	</div>
+
+		<legend tabindex=1>Select your pizza toppings:</legend>
+
+		<label for="ham">Ham : <input id="ham" type="checkbox" name="toppings" value="ham"></label>
+		<label for="pepperoni">Pepperoni : <input id="pepperoni" type="checkbox" name="toppings" value="pepperoni"></label>
+		<label for="mushrooms">Mushrooms : <input id="mushrooms" type="checkbox" name="toppings" value="mushrooms"></label>
+		<label for="olives">Olives : <input id="olives" type="checkbox" name="toppings" value="olives"></label>
     	<div>
 			 <button id="submitorder" type=button aria-label="Continue to Billing" onclick="goto('billingForm')">Submit Order</button>
 	      </div>
@@ -311,7 +384,7 @@ var goto = function(showSection){
 	}
 	else if(showSection === 'productDetails'){
 		productDetails.style.display = "block";
-		document.getElementById('onPageContent').innerHTML = "You are in product selection. Current page listed all the products available to choose";
+		document.getElementById('onPageContent').innerHTML = "You are in pizza selection page. Current page listed all the pizzas available to choose";
 	}
 	else if(showSection === 'customizeProduct'){
 		customizeProduct.style.display = "block";
