@@ -226,11 +226,11 @@ figcaption {
     width: 1px;
 }
 
-figure.toc>.figcontent a {
+.figcontent{
     display: block;
     padding: 0 0 .1em;
     border-bottom: none;
-    color: #036;
+    color: rgb(248, 250, 252);
 }
 figure.toc>.figcontent a:hover {
     cursor: auto;
@@ -242,6 +242,16 @@ fieldset label {
   font-weight: bold;
 }
 
-.product:focus {
-  background: pink;
+.products{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 100%;
 }
+
+.product{
+    width:100%;
+    font-size:12px;
+    border: 0px dashed;
+    
+}
+
